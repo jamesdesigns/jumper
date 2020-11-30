@@ -73,6 +73,17 @@ document.addEventListener('DOMContentLoaded', () => {
             if (doodlerBottomSpace <= 0) {
                 gameOver()
             }
+            platforms.forEach(platform => {
+                if (
+                    (doodlerBottomSpace >= platform.bottom) && 
+                    (doodlerBottomSpace <= platform.bottom + 15) &&
+                    ((doodlerLeftSpace + 60) >= platform.left) &&
+                    (doodlerLeftSpace <= (platform.left + 85)) &&
+                    !isJumping
+                ) {
+                    console.log('landed')
+                }
+            })
         }, 30)
     }
 
