@@ -2,13 +2,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const grid = document.querySelector('.grid')
     const doodler = document.createElement('div')
     let doodlerLeftSpace = 50
-    let doodlerBottomSpace = 150
+    let startPoint = 150
+    let doodlerBottomSpace = startPoint
     let isGameOver = false
     let platformCount = 5
     let platforms = []
     let upTimerId
     let downTimerId
     let isJumping = true
+    let isGoingLeft = false
+    let isGoingRight = false
+
 
 
     function createDoodler() {
@@ -58,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
         upTimerId = setInterval(function() {
             doodlerBottomSpace += 20
             doodler.style.bottom = doodlerBottomSpace + 'px'
-            if (doodlerBottomSpace > 350) {
+            if (doodlerBottomSpace > startPoint + 200) {
                 fall()
             }
         }, 30)
@@ -82,6 +86,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     !isJumping
                 ) {
                     console.log('landed')
+                    startPoint = doodlerBottomSpace
+                    jump()
                 }
             })
         }, 30)
@@ -96,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function control(e) {
         if (e.key === "ArrowLeft") {
-            // Move left
+            moveLeft()
 
         } else if (e.key === "ArrowRight") {
             // Move right
@@ -104,6 +110,10 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (e.key === "ArrowUp") {
             // moveStraight
         }
+    }
+
+    function moveLeft() {
+        isGoingLeft = true
     }
 
     function start() {
