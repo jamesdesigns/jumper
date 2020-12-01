@@ -114,6 +114,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function moveLeft() {
         isGoingLeft = true
+        leftTimerId - setInterval(function() {
+            doodlerLeftSpace -=5
+            doodler.style.left = doodlerLeftSpace + 'px'
+        }, 30)
     }
 
     function start() {
