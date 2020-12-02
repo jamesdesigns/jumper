@@ -13,8 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let isGoingLeft = false
     let isGoingRight = false
 
-
-
     function createDoodler() {
         grid.appendChild(doodler)
         doodler.classList.add('doodler')
