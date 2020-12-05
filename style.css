@@ -8,9 +8,10 @@
 }
 
 .doodler {
-    width: 60px;
+    background-image: url('images/angry-bird.png');
+    width: 85px;
     height: 85px;
-    background-color: red;
+    /* background-color: red; */
     position: absolute;
 }
 
