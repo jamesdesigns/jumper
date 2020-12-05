@@ -1,9 +1,10 @@
 .grid {
     width: 400px;
     height: 600px;
-    background-color: yellow;
+    background-color: lightskyblue;
     position: relative;
     font-size: 200px;
+    font-family: 'Luckiest Guy', cursive;
     text-align: center;
 }
 
@@ -11,7 +12,6 @@
     background-image: url('images/angry-bird.png');
     width: 85px;
     height: 85px;
-    /* background-color: red; */
     position: absolute;
 }
 
