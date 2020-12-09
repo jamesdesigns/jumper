@@ -70,7 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function jump() {
         clearInterval(downTimerId)
-        // clearInterval(upTimerId)
         isJumping = true
         upTimerId = setInterval(function() {
             doodlerBottomSpace += 20
@@ -83,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function fall() {
         clearInterval(upTimerId)
-        // clearInterval(downTimerId)
+        clearInterval(downTimerId)
         isJumping = false
         downTimerId = setInterval(function() {
             doodlerBottomSpace -= 5
