@@ -16,8 +16,9 @@
 }
 
 .platform {
-    width: 85px;
-    height: 15px;
-    background-color: white;
+    background-image: url('images/clouds.svg');
+    width: 105px;
+    height: 55px;
+    /* background-color: white; */
     position: absolute;
 }
