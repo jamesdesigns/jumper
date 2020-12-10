@@ -22,3 +22,10 @@
     height: 55px;
     position: absolute;
 }
+
+.title {
+    padding-top: 5%;
+    padding-left: 5%;
+    text-align: left;
+    font-size: 25px;
+}

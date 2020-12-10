@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const grid = document.querySelector('.grid')
+    const title = document.querySelector('.title')
+    const myScore = document.querySelector('.liveScore')
     const doodler = document.createElement('div')
     let doodlerLeftSpace = 50
     let startPoint = 150
@@ -72,6 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function jump() {
         clearInterval(downTimerId)
         audio.play()
+        myScore.innerHTML = score
         isJumping = true
         upTimerId = setInterval(function() {
             doodlerBottomSpace += 20
@@ -114,7 +117,8 @@ document.addEventListener('DOMContentLoaded', () => {
         while (grid.firstChild) {
             grid.removeChild(grid.firstChild)
         }
-        grid.innerHTML = score
+        grid.innerHTML = score - 2
+        
         clearInterval(upTimerId)
         clearInterval(downTimerId)
         clearInterval(leftTimerId)
