@@ -118,7 +118,8 @@ document.addEventListener('DOMContentLoaded', () => {
             grid.removeChild(grid.firstChild)
         }
         grid.innerHTML = score - 2
-        
+        console.log(grid)
+
         clearInterval(upTimerId)
         clearInterval(downTimerId)
         clearInterval(leftTimerId)
