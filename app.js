@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let leftTimerId
     let rightTimerId
     let score = 0
+    const audio = document.getElementById("myAudio")
 
     function createDoodler() {
         grid.appendChild(doodler)
@@ -70,6 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function jump() {
         clearInterval(downTimerId)
+        audio.play()
         isJumping = true
         upTimerId = setInterval(function() {
             doodlerBottomSpace += 20
