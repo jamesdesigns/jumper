@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const grid = document.querySelector('.grid')
-    // const title = document.querySelector('.title')
     const myScore = document.querySelector('.liveScore')
     const doodler = document.createElement('div')
+    const highScore = document.querySelector('.highScore')
     let doodlerLeftSpace = 50
     let startPoint = 150
     let doodlerBottomSpace = startPoint
@@ -76,6 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
         audio.play()
         isJumping = true
         myScore.innerHTML = score
+        highScore.innerHTML = score
         upTimerId = setInterval(function() {
             doodlerBottomSpace += 20
             doodler.style.bottom = doodlerBottomSpace + 'px'
