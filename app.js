@@ -76,7 +76,13 @@ document.addEventListener('DOMContentLoaded', () => {
         audio.play()
         isJumping = true
         myScore.innerHTML = score
-        highScore.innerHTML = score
+        // Add logic for High Score -- also need to add localStorage
+        if(score >= score) {
+            highScore.innerHTML = score 
+        } else {
+            highScore.innerHTML = score
+        }
+
         upTimerId = setInterval(function() {
             doodlerBottomSpace += 20
             doodler.style.bottom = doodlerBottomSpace + 'px'
