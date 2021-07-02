@@ -10,37 +10,6 @@
     padding-top: 2%;
 }
 
-.cloud-container {
-    width: 400px;
-    height: 600px;
-    position: absolute;
-    background: transparent url(images/clouds.svg) 0 0 no-repeat;
-}
-
-.fcloud01 {
-    top: 0;
-    left: 150px;
-    z-index: 100;
-    animation: drift 10s linear infinite;
-    opacity: .75;
-}
-
-.fcloud02 {
-    top: 200px;
-    left: -150px
-    z-index: 200;
-    animation: drift 35s linear backwards;
-    opacity: .5;
-}
-
-.fcloud03 {
-    top: 250px;
-    left: 75px;
-    z-index: 300;
-    animation: drift 45s linear infinite;
-    opacity: .3;
-}
-
 .doodler {
     background-image: url('images/angry-bird.png');
     width: 85px;
@@ -50,8 +19,9 @@
 
 .platform {
     background-image: url('images/clouds.svg');
-    width: 105px;
-    height: 55px;
+    background-repeat: no-repeat;
+    width: 125px;
+    height: 75px;
     position: absolute;
 }
 
