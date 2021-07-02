@@ -10,6 +10,21 @@
     padding-top: 2%;
 }
 
+.fcloud01 {
+    top: 100px;
+    z-index: 100;
+}
+
+.fcloud02 {
+    top: 240px;
+    z-index: 200;
+}
+
+.fcloud03 {
+    top: 320px;
+    z-index: 300;
+}
+
 .doodler {
     background-image: url('images/angry-bird.png');
     width: 85px;
