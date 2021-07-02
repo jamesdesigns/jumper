@@ -19,8 +19,9 @@
 
 .platform {
     background-image: url('images/clouds.svg');
-    width: 105px;
-    height: 55px;
+    background-repeat: no-repeat;
+    width: 125px;
+    height: 75px;
     position: absolute;
 }
 
@@ -43,4 +44,9 @@
 
 .highScore {
     margin-left: 75%;
+}
+
+@keyframes drift {
+    from{transform: translateY(155px);}
+    to{transform: translateY(850px);}
 }

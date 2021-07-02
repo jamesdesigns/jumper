@@ -43,8 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function createPlatforms() {
        for (let i = 0; i < platformCount; i++) {
-            let platGap = 600 / platformCount
-            let newPlatBottom = 100 + i * platGap
+            let platGap = 620 / platformCount
+            let newPlatBottom = 120 + i * platGap
             let newPlatform = new Platform(newPlatBottom)
             platforms.push(newPlatform)
        }         
